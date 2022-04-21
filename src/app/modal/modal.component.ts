@@ -3,17 +3,17 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
+  exportAs: 'modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  styleUrls: ['./modal.component.css'],
 })
-export class ModalComponent  {
-  @Output() modalClose : EventEmitter<any> = new EventEmitter<any>();
+export class ModalComponent {
+  @Output() modalClose: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor( private router : Router ) {}
-    
-  closeModal( $event ) {
-    this.router.navigate([{outlets: {modal: null}}]);
+  constructor(private router: Router) {}
+
+  closeModal($event) {
+    this.router.navigate(['', { outlets: { dialog: null } }]);
     this.modalClose.next($event);
   }
-
 }

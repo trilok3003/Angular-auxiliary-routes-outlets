@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 <button (click)="closeRoute()">close</button>
 <hr>
 <hr>
-<a [routerLink]="[ {outlets: { dialog: 'modal-test' } } ]">Modal Test</a>
+<a [routerLink]="['/', {outlets: { dialog: 'modal-test' } } ]">Modal Test</a>
 
   `,
   styles: [`h1 { font-family: Lato; }`],
