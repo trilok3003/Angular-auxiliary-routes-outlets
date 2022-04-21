@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   selector: 'app-modal',
   exportAs: 'modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css'],
+  styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent {
   @Output() modalClose: EventEmitter<any> = new EventEmitter<any>();
