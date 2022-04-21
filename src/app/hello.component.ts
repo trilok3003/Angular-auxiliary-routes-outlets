@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 <a [routerLink]="['/', {outlets: { dialog: 'test' } } ]">test</a>
 <button (click)="changeRoute()">Test</button>
 <button (click)="closeRoute()">close</button>
-
+<hr>
+<hr>
+<a [routerLink]="[ {outlets: { dialog: 'modal-test' } } ]">Modal Test</a>
 
   `,
   styles: [`h1 { font-family: Lato; }`],
@@ -22,6 +24,6 @@ export class HelloComponent {
     });
   }
   closeRoute() {
-    this.router.navigate(['', { outlets: { dialog: null } }])
+    this.router.navigate(['', { outlets: { dialog: null } }]);
   }
 }
